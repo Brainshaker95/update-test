@@ -1,0 +1,5 @@
+.container {
+  margin-inline: auto;
+  padding-inline: clamp(theme('spacing.4'), 4vw, theme('spacing.12'));
+  max-width: theme('screens.3xl');
+}

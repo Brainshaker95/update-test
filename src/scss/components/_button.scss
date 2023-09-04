@@ -1,0 +1,13 @@
+@use '../utilities/with-triangles' as *;
+
+.button {
+  @extend %with-triangles-hover;
+
+  &[disabled] {
+    @apply
+      pointer-events-none
+      text-opacity-50
+      text-light
+    ;
+  }
+}

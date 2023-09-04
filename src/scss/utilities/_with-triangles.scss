@@ -1,0 +1,91 @@
+%with-triangles {
+  --tw: var(--triangle-width, 1em);
+
+  @apply
+    relative
+    inline-flex
+    justify-center
+    items-center
+    px-2-em
+    py-1-em
+    bg-blur
+    mx-[var(--tw)]
+  ;
+
+  &::before,
+  &::after {
+    @apply
+      absolute
+      top-0
+      w-[var(--tw)]
+      h-full
+      opacity-70
+      content-empty
+    ;
+  }
+
+  &::before {
+    background: linear-gradient(
+      to bottom right,
+      transparent 0,
+      transparent 50%,
+      var(--clr-dark-hex) 50%,
+      var(--clr-dark-hex) 100%
+    );
+
+    @apply -left-[var(--tw)];
+  }
+
+  &::after {
+    background: linear-gradient(
+      to top left,
+      transparent 0,
+      transparent 50%,
+      var(--clr-dark-hex) 50%,
+      var(--clr-dark-hex) 100%
+    );
+
+    @apply -right-[var(--tw)];
+  }
+}
+
+%with-triangles-hover {
+  @extend %with-triangles;
+
+  @apply
+    transition-colors
+    duration-200
+  ;
+
+  &::before,
+  &::after {
+    // --clr-dark-hex is a custom houdini property and is therefore transitionable
+    // stylelint-disable-next-line custom-property-no-missing-var-function
+    transition: --clr-dark-hex 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover,
+  &:focus-visible {
+    @apply
+      bg-light
+      text-dark
+    ;
+
+    &::before,
+    &::after {
+      --clr-dark-hex: rgb(var(--clr-light));
+
+      @apply opacity-100;
+    }
+  }
+}
+
+@layer utilities {
+  .with-triangles {
+    @extend %with-triangles;
+  }
+
+  .with-triangles-hover {
+    @extend %with-triangles-hover;
+  }
+}

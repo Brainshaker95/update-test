@@ -1,0 +1,13 @@
+.env
+.eslintcache
+.stylelintcache
+.svelte-kit
+build
+csharp/**/bin
+csharp/**/maps
+csharp/**/obj
+csharp/**/packages
+dist
+node_modules
+tmp
+yarn-error.log

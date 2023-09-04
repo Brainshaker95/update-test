@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "include": [
+    "./*.cjs",
+    "./*.mjs",
+    "../src/**/*.cjs",
+    "../src/**/*.ts",
+    "../src/**/*.d.ts",
+    "../src/**/*.svelte",
+    "../svelte.config.js"
+  ]
+}

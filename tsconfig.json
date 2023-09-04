@@ -1,0 +1,101 @@
+{
+  "extends": "./.svelte-kit/tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "vite/client",
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "noEmit": true,
+    "strict": true,
+    "allowJs": true,
+    "checkJs": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "$app/*": [
+        "./.svelte/dev/runtime/app/*",
+        "./.svelte/build/runtime/app/*"
+      ],
+      "$dynamic-types": [
+        "./.svelte-kit/types/src/routes/$types"
+      ],
+      "$dynamic-types/*": [
+        "./.svelte-kit/types/src/routes/*"
+      ],
+      "$components": [
+        "./src/lib/components"
+      ],
+      "$components/*": [
+        "./src/lib/components/*"
+      ],
+      "$lib": [
+        "./src/lib"
+      ],
+      "$lib/*": [
+        "./src/lib/*"
+      ],
+      "$root": [
+        "./"
+      ],
+      "$root/*": [
+        "./*"
+      ],
+      "$resources": [
+        "./resources/app"
+      ],
+      "$resources/*": [
+        "./resources/app/*"
+      ],
+      "$scss": [
+        "./src/scss"
+      ],
+      "$scss/*": [
+        "./src/scss/*"
+      ],
+      "$schemas": [
+        "./src/lib/schemas"
+      ],
+      "$schemas/*": [
+        "./src/lib/schemas/*"
+      ],
+      "$types": [
+        "./src/types"
+      ],
+      "$types/*": [
+        "./src/types/*"
+      ],
+      "$utils": [
+        "./src/lib/utils"
+      ],
+      "$utils/*": [
+        "./src/lib/utils/*"
+      ]
+    }
+  },
+  "include": [
+    "./*.js",
+    "./*.cjs",
+    "./*.mjs",
+    "./*.ts",
+    "./*.d.ts",
+    "./conf/**/*.js",
+    "./conf/**/*.cjs",
+    "./conf/**/*.mjs",
+    "./conf/**/*.ts",
+    "./conf/**/*.d.ts",
+    "./src/**/*.js",
+    "./src/**/*.cjs",
+    "./src/**/*.mjs",
+    "./src/**/*.ts",
+    "./src/**/*.d.ts",
+    "./src/**/*.svelte"
+  ]
+}

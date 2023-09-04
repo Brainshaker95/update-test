@@ -1,0 +1,26 @@
+@use 'sass:map';
+
+@use '../bootstrap' as *;
+
+@each $ff-name, $definitions in $fonts {
+  $file-name: get-font-file-name($ff-name);
+
+  @each $definition in $definitions {
+    $style: map.get($definition, style);
+    $weight: map.get($definition, weight);
+    $file-name-suffix: $weight;
+
+    @if $style != normal {
+      $file-name-suffix: $file-name-suffix + $style;
+    }
+
+    @font-face {
+      font-family: $ff-name;
+      font-style: $style;
+      font-weight: $weight;
+      font-display: swap;
+      src: local(''),
+        url('../../fonts/#{$file-name}-#{$file-name-suffix}.woff2') format('woff2');
+    }
+  }
+}

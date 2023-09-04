@@ -1,0 +1,8 @@
+@forward 'tailwindcss/base';
+@forward '../base';
+
+@forward 'tailwindcss/components';
+@forward '../components';
+
+@forward 'tailwindcss/utilities';
+@forward '../utilities';

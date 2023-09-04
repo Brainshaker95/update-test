@@ -1,0 +1,70 @@
+@use 'sass:math';
+
+@use '../bootstrap' as *;
+
+// stylelint-disable selector-pseudo-class-no-unknown, property-no-unknown
+:export {
+  fsScaleMinWidth: $fs-scale-min-width;
+  fsScaleMaxWidth: $fs-scale-max-width;
+  fs: {
+    xs: {
+      min: $fs-xs-min;
+      max: $fs-xs-max;
+    };
+    sm: {
+      min: $fs-sm-min;
+      max: $fs-sm-max;
+    };
+    md: {
+      min: $fs-md-min;
+      max: $fs-md-max;
+    };
+    lg: {
+      min: $fs-lg-min;
+      max: $fs-lg-max;
+    };
+    xl: {
+      min: $fs-xl-min;
+      max: $fs-xl-max;
+    };
+    #{'2xl'}: {
+      min: $fs-2xl-min;
+      max: $fs-2xl-max;
+    };
+    #{'3xl'}: {
+      min: $fs-3xl-min;
+      max: $fs-3xl-max;
+    };
+  };
+  lh: {
+    xs: {
+      min: $lh-xs-min;
+      max: $lh-xs-max;
+    };
+    sm: {
+      min: $lh-sm-min;
+      max: $lh-sm-max;
+    };
+    md: {
+      min: $lh-md-min;
+      max: $lh-md-max;
+    };
+    lg: {
+      min: $lh-lg-min;
+      max: $lh-lg-max;
+    };
+    xl: {
+      min: $lh-xl-min;
+      max: $lh-xl-max;
+    };
+    #{'2xl'}: {
+      min: $lh-2xl-min;
+      max: $lh-2xl-max;
+    };
+    #{'3xl'}: {
+      min: $lh-3xl-min;
+      max: $lh-3xl-max;
+    };
+  };
+}
+// stylelint-enable selector-pseudo-class-no-unknown, property-no-unknown

@@ -1,0 +1,42 @@
+@use '../bootstrap' as *;
+
+._toastContainer {
+  --toastContainerTop: auto;
+  --toastContainerBottom: 0;
+  --toastContainerRight: 0;
+  --toastWidth: clamp(min(100%, 375px), 40vw, 500px);
+  --toastMargin: 0;
+  --toastMsgPadding: 0.75em 0.25em 1em 1.25em;
+  --toastColor: #{$clr-light-hex};
+  --toastBackground: #{$clr-grey-hex};
+  --toastBorderRadius: 0;
+  --toastBoxShadow: none;
+  --toastBtnWidth: auto;
+  --toastBtnFont: 1.25em sans-serif;
+  --toastBarHeight: 0.25em;
+  --toastBarBackground: #{$clr-primary-hex};
+
+  li {
+    @apply
+      flex
+      justify-end
+      text-sm
+      pointer-events-auto
+    ;
+  }
+
+  [role="button"] {
+    @apply
+      pt-3-em
+      pb-4-em
+      px-4-em
+      transition-colors
+      duration-200
+    ;
+
+    &:hover,
+    &:focus-visible {
+      @apply text-primary;
+    }
+  }
+}

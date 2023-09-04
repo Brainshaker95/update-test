@@ -1,0 +1,19 @@
+.upload {
+  @apply
+    grid
+    place-items-center
+    h-[min(clamp(200px,20vw,400px),clamp(200px,30vh,400px))]
+    p-4
+    bg-blur
+    border
+    border-light
+    border-dashed
+    transition-colors
+    duration-200
+    outline-none;
+
+  &:focus-visible,
+  &--is-highlighted {
+    @apply border-primary;
+  }
+}
