@@ -1,0 +1,27 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  run:
+    runs-on: windows-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+
+      - name: Install dependencies
+        run: 'yarn --network-timeout 100000'
+
+      - name: Publish app
+        run: 'yarn publish-app'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,37 @@
+@use '../bootstrap' as *;
+
+@property --clr-dark-hex {
+  syntax: '<color>';
+  initial-value: $clr-dark-hex;
+  inherits: true;
+}
+
+// stylelint-disable selector-pseudo-class-no-unknown
+:export {
+  --ff-body: #{$ff-body}, system-ui, sans-serif;
+
+  --fw-extralight: #{$fw-extralight};
+  --fw-light: #{$fw-light};
+  --fw-regular: #{$fw-regular};
+  --fw-medium: #{$fw-medium};
+  --fw-semibold: #{$fw-semibold};
+  --fw-bold: #{$fw-bold};
+  --fw-extrabold: #{$fw-extrabold};
+  --fw-black: #{$fw-black};
+
+  --clr-light: 206 206 206;
+  --clr-light-hex: #{$clr-light-hex};
+  --clr-dark: 30 30 30;
+  --clr-dark-hex: #{$clr-dark-hex};
+  --clr-grey: 55 55 55;
+  --clr-grey-hex: #{$clr-grey-hex};
+  --clr-primary: 255 157 0;
+  --clr-primary-hex: #{$clr-primary-hex};
+  --clr-success: 31 120 89;
+  --clr-success-hex: #{$clr-success-hex};
+  --clr-error: 162 47 47;
+  --clr-error-hex: #{$clr-error-hex};
+
+  --flow-space: 1rem;
+}
+// stylelint-enable selector-pseudo-class-no-unknown

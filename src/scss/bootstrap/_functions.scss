@@ -1,0 +1,10 @@
+@use 'sass:string';
+
+@function get-font-file-name($str) {
+  @while (string.index($str, ' ') != null) {
+    $index: string.index($str, ' ');
+    $str: '#{str-slice($str, 0, $index - 1)}-#{str-slice($str, $index + 1)}';
+  }
+
+  @return unquote(to-lower-case($str));
+}

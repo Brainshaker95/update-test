@@ -1,0 +1,38 @@
+body {
+  text-rendering: geometricPrecision;
+  background-image: url('/background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &::after {
+    content: '';
+
+    @apply
+      fixed
+      inset-0
+      bg-dark
+      bg-opacity-70
+      -z-1
+    ;
+  }
+
+  .bp-lock & {
+    @apply overflow-visible;
+  }
+}
+
+[id] {
+  scroll-margin-top: 100px;
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space);
+}
+
+.auto-grid {
+  --grid-col-max-w: 25ch;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-col-max-w), 1fr));
+  gap: clamp(1em, 3vw, 2em);
+}

@@ -1,0 +1,63 @@
+@use '../utilities/with-triangles' as *;
+
+%headline-base {
+  @extend %with-triangles;
+
+  @apply
+    w-fit
+    px-2-em
+    py-0.5-em
+    mb-1-em
+  ;
+}
+
+%headline-extralight {
+  @extend %headline-base;
+  @apply font-extralight;
+}
+
+%headline-light {
+  @extend %headline-base;
+  @apply font-light;
+}
+
+%headline-regular {
+  @extend %headline-base;
+  @apply font-regular;
+}
+
+h1,
+.h1 {
+  @extend %headline-light;
+  @apply text-3xl;
+}
+
+h2,
+.h2 {
+  @extend %headline-light;
+  @apply text-2xl;
+}
+
+h3,
+.h3 {
+  @extend %headline-light;
+  @apply text-xl;
+}
+
+h4,
+.h4 {
+  @extend %headline-light;
+  @apply text-lg;
+}
+
+h5,
+.h5 {
+  @extend %headline-regular;
+  @apply text-md;
+}
+
+h6,
+.h6 {
+  @extend %headline-regular;
+  @apply text-sm;
+}

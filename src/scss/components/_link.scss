@@ -1,0 +1,12 @@
+.link {
+  @apply
+    outline-none
+    transition-colors
+    duration-200
+  ;
+
+  &:hover,
+  &:focus-visible {
+    @apply text-primary;
+  }
+}

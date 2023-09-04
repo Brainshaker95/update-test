@@ -1,0 +1,49 @@
+@use '../utilities/with-triangles' as *;
+
+.form {
+  --triangle-width: 1em;
+
+  @apply
+    grid
+    gap-x-4-em
+    gap-y-6-em
+  ;
+
+  &__row {
+    @apply w-full;
+  }
+
+  &__label {
+    @apply
+      block
+      title
+      mb-1-em
+      px-[var(--triangle-width)]
+    ;
+  }
+
+  &__widget {
+    @extend %with-triangles;
+    // stylelint-disable scss/operator-no-unspaced
+    @apply w-[calc(100%-2*var(--triangle-width))];
+    // stylelint-enable scss/operator-no-unspaced
+  }
+
+  &__input {
+    @apply
+      w-full
+      bg-transparent
+    ;
+
+    &:focus {
+      @apply outline-none;
+    }
+
+    &::placeholder {
+      @apply
+        text-light
+        opacity-40
+      ;
+    }
+  }
+}

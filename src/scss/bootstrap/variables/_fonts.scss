@@ -1,0 +1,69 @@
+@use 'sass:math';
+
+$ff-body: 'Lato';
+
+$fw-extralight: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-extrabold: 800;
+$fw-black: 900;
+
+$fs-normal: normal;
+$fs-italic: italic;
+
+$fonts: (
+  #{$ff-body}: ((
+    weight: $fw-regular,
+    style: $fs-normal,
+  ), (
+    weight: $fw-regular,
+    style: $fs-italic,
+  ), (
+    weight: $fw-bold,
+    style: $fs-normal,
+  ), (
+    weight: $fw-bold,
+    style: $fs-italic,
+  )),
+);
+
+$fs-scale-min-width: 640;
+$fs-scale-max-width: 1280;
+
+$fs-xs-min: math.div(14px, 16px) + rem;
+$fs-xs-max: math.div(16px, 16px) + rem;
+$lh-xs-min: math.div(22px, 16px) + rem;
+$lh-xs-max: math.div(24px, 16px) + rem;
+
+$fs-sm-min: math.div(16px, 16px) + rem;
+$fs-sm-max: math.div(18px, 16px) + rem;
+$lh-sm-min: math.div(24px, 16px) + rem;
+$lh-sm-max: math.div(26px, 16px) + rem;
+
+$fs-md-min: math.div(18px, 16px) + rem;
+$fs-md-max: math.div(20px, 16px) + rem;
+$lh-md-min: math.div(26px, 16px) + rem;
+$lh-md-max: math.div(30px, 16px) + rem;
+
+$fs-lg-min: math.div(22px, 16px) + rem;
+$fs-lg-max: math.div(24px, 16px) + rem;
+$lh-lg-min: math.div(30px, 16px) + rem;
+$lh-lg-max: math.div(32px, 16px) + rem;
+
+$fs-xl-min: math.div(26px, 16px) + rem;
+$fs-xl-max: math.div(32px, 16px) + rem;
+$lh-xl-min: math.div(36px, 16px) + rem;
+$lh-xl-max: math.div(42px, 16px) + rem;
+
+$fs-2xl-min: math.div(30px, 16px) + rem;
+$fs-2xl-max: math.div(38px, 16px) + rem;
+$lh-2xl-min: math.div(40px, 16px) + rem;
+$lh-2xl-max: math.div(48px, 16px) + rem;
+
+$fs-3xl-min: math.div(38px, 16px) + rem;
+$fs-3xl-max: math.div(46px, 16px) + rem;
+$lh-3xl-min: math.div(46px, 16px) + rem;
+$lh-3xl-max: math.div(56px, 16px) + rem;

@@ -1,0 +1,16 @@
+@layer utilities {
+  .bg-blur {
+    @apply
+      bg-dark
+      bg-opacity-75
+      backdrop-blur-sm
+    ;
+
+    &--grey {
+      @apply
+        bg-grey
+        bg-opacity-75
+      ;
+    }
+  }
+}

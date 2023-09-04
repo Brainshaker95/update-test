@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "tintoy.msbuild-project-tools",
+    "ms-dotnettools.csharp",
+    "svelte.svelte-vscode"
+  ]
+}
